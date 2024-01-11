@@ -131,11 +131,11 @@ class MyCustomDataset2(Dataset):
             ])
         sample_num = np.arange(1,601)
         sample_text = [f"{i:03}" for i in sample_num]
-        data_path = ['/data/denoised/MRC_0601/'+ s +'_particles_shiny_nb50_new.mrcs' for s in sample_text]
+        data_path = ['/denoised/MRC_0601/'+ s +'_particles_shiny_nb50_new.mrcs' for s in sample_text]
 
         sample_num = np.arange(1,482)
         sample_text = [f"{i:03}" for i in sample_num]
-        data_path = data_path + ['/data/denoised/MRC_1901/'+ s +'_particles_shiny_nb50_new.mrcs' for s in sample_text]
+        data_path = data_path + ['/denoised/MRC_1901/'+ s +'_particles_shiny_nb50_new.mrcs' for s in sample_text]
         np.random.shuffle(data_path)
         train_size = int(0.8 * len(data_path))
         data_path = data_path[:train_size] 
