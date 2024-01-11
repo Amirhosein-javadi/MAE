@@ -246,7 +246,7 @@ def init_distributed_mode(args):
                                         world_size=args.world_size, rank=args.rank,
                                         timeout=datetime.timedelta(seconds=54000))
     print("1")
-    torch.distributed.barrier()
+    #torch.distributed.barrier()
     print("2")
     setup_for_distributed(args.rank == 0)
     print("3")
